@@ -6,7 +6,7 @@ t will play funny song effect if hited a 1 or 20. It also have an option to roll
 
 ## :camera_flash: Screenshots
 <!-- You can add more screenshots here if you like -->
-<img src="/result/image1.png" width="260">&emsp;<img src="/result/image2.png" width="260">&emsp;<img src="/result/image3.png" width="260">
+<img src="/images_app/image1.png" width="260">&emsp;<img src="/images_app/image2.png" width="260">&emsp;<img src="/images_app/image3.png" width="260">
 
 ## Technologies
 * Kotlin
