@@ -1,6 +1,6 @@
 # Simple RPG Dice
-	Simple RPG Dice is an app I developed just to play some RPG like D&D, it rolls die of 4, 6, 8, 10, 12, 20 and 100 sides. When rolled a D20, 
-	it will play funny song effect if hited a 1 or 20. It also have an option to roll more than one die or add integer number to the final result.
+Simple RPG Dice is an app I developed just to play some RPG like D&D, it rolls die of 4, 6, 8, 10, 12, 20 and 100 sides. When rolled a D20, 
+t will play funny song effect if hited a 1 or 20. It also have an option to roll more than one die or add integer number to the final result.
 
 
 
