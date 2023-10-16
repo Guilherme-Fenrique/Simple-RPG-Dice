@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4E4949"
+    android:padding="8sp"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/background_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:background="@drawable/background_result"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:textSize="80dp"
+        android:autoSizeTextType="uniform"
+        android:textAlignment="center"
+        android:fontFamily="@font/pixel_font2"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:layout_constraintLeft_toLeftOf="@+id/view"
+        app:layout_constraintRight_toRightOf="@+id/view"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        />
+    <TextView
+        android:id="@+id/tvDadosRolados"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Valor do dado:"
+        android:layout_margin="8dp"
+        android:visibility="gone"
+        android:maxLines="2"
+        android:textSize="16dp"
+        android:fontFamily="@font/pixel_font2"
+        app:layout_constraintLeft_toLeftOf="@+id/view"
+        app:layout_constraintRight_toRightOf="@+id/view"
+        app:layout_constraintTop_toBottomOf="@id/tvResultado"
+
+        />
+    <TextView
+        android:id="@+id/tvModResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="16dp"
+        android:text="+ Modificador:"
+        android:textColor="@color/white"
+        android:fontFamily="@font/pixel_font2"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/tvDadosRolados"
+        app:layout_constraintLeft_toLeftOf="@id/view"/>
+
+    <TextView
+        android:id="@+id/tvDados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textScaleX=".9"
+        android:text="Dados"
+        android:textColor="@color/white"
+        android:fontFamily="@font/pixel_font2"
+        android:textSize="16dp"
+        app:layout_constraintLeft_toLeftOf="@id/btnRemove"
+        app:layout_constraintBottom_toTopOf="@id/btnRemove"
+        app:layout_constraintRight_toRightOf="@id/btnAdd"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRemove"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/custom_btn_remove"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/d4"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/qtdDado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:text="1d"
+        android:minEms="1"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:fontFamily="@font/pixel_font2"
+        app:layout_constraintBottom_toBottomOf="@id/btnRemove"
+        app:layout_constraintLeft_toRightOf="@id/btnRemove"
+        app:layout_constraintTop_toTopOf="@id/btnRemove"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAdd"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/custom_btn_add"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toTopOf="@id/btnRemove"
+        app:layout_constraintLeft_toRightOf="@id/qtdDado"/>
+
+
+    <TextView
+        android:id="@+id/tvMod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textScaleX=".9"
+        android:text="Modificador"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:fontFamily="@font/pixel_font2"
+        app:layout_constraintLeft_toLeftOf="@id/btnRemoveMod"
+        app:layout_constraintRight_toRightOf="@id/btnAddMod"
+        app:layout_constraintBottom_toTopOf="@id/btnRemove"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRemoveMod"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/custom_btn_remove"
+        android:backgroundTint="@color/white"
+        app:layout_constraintTop_toTopOf="@id/btnRemove"
+        app:layout_constraintRight_toLeftOf="@id/qtdMod"
+
+        />
+
+    <TextView
+        android:id="@+id/qtdMod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:text="0"
+        android:minEms="1"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:fontFamily="@font/pixel_font2"
+        app:layout_constraintTop_toTopOf="@id/btnAddMod"
+        app:layout_constraintBottom_toBottomOf="@id/btnAddMod"
+        app:layout_constraintRight_toLeftOf="@id/btnAddMod"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddMod"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/custom_btn_add"
+        android:backgroundTint="@color/white"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnRemove"
+        />
+
+    <ImageButton
+        android:id="@+id/d4"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/d4"
+        android:background="@drawable/button_pressed"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toTopOf="@id/d12"
+        app:layout_constraintEnd_toStartOf="@+id/d6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/d6"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/d6"
+        android:background="@drawable/button_pressed"
+        android:layout_marginRight="3dp"
+        app:layout_constraintEnd_toStartOf="@+id/d8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/d4"
+        app:layout_constraintTop_toTopOf="@id/d4" />
+
+    <ImageButton
+        android:id="@+id/d8"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/d8"
+        android:background="@drawable/button_pressed"
+        android:layout_marginRight="3dp"
+        app:layout_constraintEnd_toStartOf="@+id/d10"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/d6"
+        app:layout_constraintTop_toTopOf="@id/d4" />
+
+    <ImageButton
+        android:id="@+id/d10"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/d10"
+        android:background="@drawable/button_pressed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/d8"
+        app:layout_constraintTop_toTopOf="@id/d4" />
+
+    <ImageButton
+        android:id="@+id/d12"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/d12"
+        android:background="@drawable/button_pressed"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/d20"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/d20"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/d20"
+        android:background="@drawable/button_pressed"
+        android:layout_marginRight="3dp"
+        app:layout_constraintEnd_toStartOf="@+id/d100"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/d12"
+        app:layout_constraintTop_toTopOf="@id/d12" />
+
+    <ImageButton
+        android:id="@+id/d100"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/d100"
+        android:background="@drawable/button_pressed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/d20"
+        app:layout_constraintTop_toTopOf="@id/d12" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
