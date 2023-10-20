@@ -20,7 +20,7 @@ t will play funny song effect if hited a 1 or 20. It also have an option to roll
     - Button
 	- View
 	
-- Biding for aecssing UI components
+- Binding for aecssing UI components
 - MediaPlayer to play sound effects
 - Custon drawables for buttons and icon
 
