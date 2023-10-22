@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Simple RPG Dice</string>
+    <string name="valor_do_dado">Valor do dado:</string>
+    <string name="modificador">+ Modificador:</string>
+    <string name="dados">Dados</string>
+    <string name="_1d">1d</string>
+    <string name="tv_modificador_tv">Modificador</string>
+    <string name="_modificador_text">0</string>
 </resources>

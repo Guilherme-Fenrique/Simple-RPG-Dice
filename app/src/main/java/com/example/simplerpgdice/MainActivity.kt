@@ -1,11 +1,15 @@
 package com.example.simplerpgdice
 
+import android.annotation.SuppressLint
 import android.app.Activity
+import android.content.Intent
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.ResultReceiver
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -67,13 +71,32 @@ class MainActivity : AppCompatActivity() {
             rolarDado(qtdDado, 20, mod)
         }
         biding.d100.setOnClickListener() {
+
             rolarDado(qtdDado, 100, mod)
         }
 
 
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.app_bar_menu,menu)
+        return true
+
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.miCloseApp -> this.finish()
+        }
+        return true
+    }
+
+
+
+
+
     private fun rolarDado(qtdDado: Int, numeroLados: Int, mod: Int) {
+
 
 
 
@@ -100,8 +123,8 @@ class MainActivity : AppCompatActivity() {
 
 
         if (numeroLados == 20 && rollArray.sum() == 1) {
-            var natOne = MediaPlayer.create(this, R.raw.laugh)
 
+            var natOne = MediaPlayer.create(this, R.raw.laugh)
             natOne.start()
 
 
