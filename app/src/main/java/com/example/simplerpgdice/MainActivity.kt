@@ -79,26 +79,20 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.app_bar_menu,menu)
+        menuInflater.inflate(R.menu.app_bar_menu, menu)
         return true
 
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
+        when (item.itemId) {
             R.id.miCloseApp -> this.finish()
         }
         return true
     }
 
 
-
-
-
     private fun rolarDado(qtdDado: Int, numeroLados: Int, mod: Int) {
-
-
-
 
         var rollArray = IntArray(qtdDado)
 
